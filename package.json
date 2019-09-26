@@ -9,10 +9,11 @@
   "scripts": {
     "build": "rollup -c",
     "clean": "npx shx rm -rf dist && mkdir dist",
-    "prepare": "npm run clean && npm run build && npm run test && npm run lint",
+    "prepare": "npm run clean && npm run build && npm run test",
     "test": "jest"
   },
   "devDependencies": {
+    "@babel/core": "^7.6.2",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
@@ -23,6 +24,7 @@
     "jest": "^24.9.0",
     "jest-localstorage-mock": "^2.4.0",
     "react": "^16.9.0",
+    "react-test-renderer": "^16.9.0",
     "rollup": "^1.21.4",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
