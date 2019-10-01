@@ -1,5 +1,5 @@
 {
-  "name": "hooks",
+  "name": "@phobon/hooks",
   "version": "1.0.0",
   "description": "Handy React Hooks",
   "main": "dist/index.js",
