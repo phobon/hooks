@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import { useEffect, useCallback } from 'react';
 
 const eventHandler = (

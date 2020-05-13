@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import { useEffect, useRef } from 'react';
 
 // A custom hook that makes setInterval declarative in a hooks world.

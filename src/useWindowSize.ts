@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import { useState, useCallback, useEffect } from 'react';
 
 interface WindowSize {

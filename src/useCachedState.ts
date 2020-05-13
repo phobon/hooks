@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import { useEffect, useState } from 'react';
 
 type SetCachedStateType = (value: any) => void;
