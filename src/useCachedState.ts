@@ -1,11 +1,15 @@
+/// <reference types="react" />
 import { useEffect, useState } from 'react';
 
-const useCachedState = (key, initialValue = '') => {
-  const [state, setState] = useState(null);
+type SetCachedStateType = (value: any) => void;
+type CachedStateType = object | string;
+
+const useCachedState = (key: string, initialValue: any = ''): Array<CachedStateType | SetCachedStateType> => {
+  const [state, setState] = useState<CachedStateType>(null);
 
   // Wrapping this in a useEffect so that SSR instances can handle it.
   useEffect(() => {
-    const result = window.localStorage.getItem(key);
+    const result: string = window.localStorage.getItem(key);
     if (result) {
       setState(JSON.parse(result));
     } else {
@@ -13,9 +17,9 @@ const useCachedState = (key, initialValue = '') => {
     }
   }, []);
 
-  const setCachedState = value => {
+  const setCachedState = (value: any) => {
     try {
-      const newState = value instanceof Function ? value(storedValue) : value;
+      const newState = value instanceof Function ? value(state) : value;
       setState(newState);
       
       window.localStorage.setItem(key, JSON.stringify(newState));

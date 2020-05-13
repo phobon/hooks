@@ -11,13 +11,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - uses: Borales/actions-yarn@v2.0.1
-        with:
-          cmd: install
-      - uses: Borales/actions-yarn@v2.0.1
-        with:
-          cmd: build
-      - uses: Borales/actions-yarn@v2.0.1
+      - run: |
+          yarn && yarn build && yarn publish
         with:
           auth-token: ${{ secrets.NPM_TOKEN }}
-          cmd: publish
