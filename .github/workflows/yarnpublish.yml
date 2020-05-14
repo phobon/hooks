@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - run: |
-          yarn && yarn build && yarn publish
         with:
           auth-token: ${{ secrets.NPM_TOKEN }}
+      - run: |
+          yarn && yarn build && yarn publish
