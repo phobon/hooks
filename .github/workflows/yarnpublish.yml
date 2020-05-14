@@ -11,7 +11,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
+      - run: |
+          yarn && yarn build
+      - uses: luvies/action-yarn-publish@v0.1.1
         with:
           auth-token: ${{ secrets.NPM_TOKEN }}
-      - run: |
-          yarn && yarn build && yarn publish
