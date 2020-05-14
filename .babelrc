@@ -4,7 +4,8 @@
       "@babel/env", {
         "loose": true,
         "modules": false
-      }
+      },
+      "@babel/preset-typescript"
     ],
     "@babel/react"
   ],
