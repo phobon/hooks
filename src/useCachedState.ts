@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 type SetCachedStateType = (value: any) => void;
 type CachedStateType = object | string;
 
-const useCachedState = (key: string, initialValue: any = ''): Array<CachedStateType | SetCachedStateType> => {
+export const useCachedState = (key: string, initialValue: any = ''): Array<CachedStateType | SetCachedStateType> => {
   const [state, setState] = useState<CachedStateType>(null);
 
   // Wrapping this in a useEffect so that SSR instances can handle it.
@@ -29,5 +29,3 @@ const useCachedState = (key: string, initialValue: any = ''): Array<CachedStateT
 
   return [state, setCachedState];
 };
-
-export default useCachedState;

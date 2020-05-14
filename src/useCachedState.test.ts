@@ -1,7 +1,7 @@
 import 'jest-localstorage-mock';
 import { renderHook, cleanup, act } from '@testing-library/react-hooks';
 
-import useCachedState from './useCachedState';
+import { useCachedState } from './useCachedState';
 
 afterEach(() => cleanup);
 

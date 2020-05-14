@@ -17,7 +17,7 @@ const getWindowSize = (): WindowSize => ({
 /**
  * Hook to query the current window size. Triggers on window resize.
  */
-const useWindowSize = (): WindowSize => {
+export const useWindowSize = (): WindowSize => {
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
   const handleResize = useCallback(() => setWindowSize(getWindowSize()), []);
@@ -29,5 +29,3 @@ const useWindowSize = (): WindowSize => {
 
   return windowSize;
 };
-
-export default useWindowSize;

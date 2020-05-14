@@ -26,7 +26,7 @@ const eventHandler = (
   }
 }
 
-const useOnKeyPress = (
+export const useOnKeyPress = (
   targetKey: string,
   onKeyDownHandler?: (e: KeyboardEvent) => void,
   onKeyUpHandler?: (e: KeyboardEvent) => void,
@@ -46,5 +46,3 @@ const useOnKeyPress = (
     }
   }, []);
 };
-
-export default useOnKeyPress;
