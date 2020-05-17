@@ -1,10 +1,7 @@
 import { useEffect, useState } from 'react';
 
-type SetCachedStateType = (value: any) => void;
-type CachedStateType = object | string;
-
-export const useCachedState = (key: string, initialValue: any = ''): Array<CachedStateType | SetCachedStateType> => {
-  const [state, setState] = useState<CachedStateType>(null);
+export const useCachedState = <T>(key: string, initialValue: T): Array<T | React.Dispatch<React.SetStateAction<T>>> => {
+  const [state, setState] = useState<T>(null);
 
   // Wrapping this in a useEffect so that SSR instances can handle it.
   useEffect(() => {

@@ -18,7 +18,7 @@ const storageObject = { key: 'value' };
 const storageArray = [0, 1];
 
 test('useCachedState with simple values', () => {
-  const { result } = renderHook(() => useCachedState('cachedstate:string', 'test'));
+  const { result } = renderHook(() => useCachedState<string>('cachedstate:string', 'test'));
 
   expect(result.current[0]).toBe('test');
 
@@ -32,7 +32,7 @@ test('useCachedState with simple values', () => {
 });
 
 test('useCachedState with objects', () => {
-  const { result } = renderHook(() => useCachedState('cachedstate:object', storageObject));
+  const { result } = renderHook(() => useCachedState<object>('cachedstate:object', storageObject));
 
   expect(result.current[0]).toEqual(storageObject);
 

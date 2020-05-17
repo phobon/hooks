@@ -1,6 +1,6 @@
 {
   "name": "@phobon/hooks",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Handy React Hooks",
   "main": "dist/index.js",
   "types": "types.d.ts",

@@ -1,11 +1,11 @@
 import { useEffect, useCallback } from 'react';
 
 const eventHandler = (
-    e: KeyboardEvent,
-    handler: (event: KeyboardEvent) => void,
-    targetKey: string,
-    targetModifier: string,
-    debug: boolean,
+  e: KeyboardEvent,
+  handler: (event: KeyboardEvent) => void,
+  targetKey: string,
+  targetModifier: string,
+  debug: boolean,
 ) => {
   if (debug) {
     console.log("keydown", e.key, e.key !== targetKey);

@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from 'react';
 
-interface WindowSize {
+export interface WindowSize {
   innerWidth?: number;
   innerHeight?: number;
   outerWidth?: number;
@@ -14,9 +14,6 @@ const getWindowSize = (): WindowSize => ({
   outerHeight: window.outerHeight,
 });
 
-/**
- * Hook to query the current window size. Triggers on window resize.
- */
 export const useWindowSize = (): WindowSize => {
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
